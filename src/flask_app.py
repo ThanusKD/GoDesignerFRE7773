@@ -6,8 +6,8 @@ import os,sys
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, parent_dir)
 from flask import Flask, request, jsonify
-from metaflow import Flow
-from metaflow import get_metadata, metadata
+#from metaflow import Flow
+#from metaflow import get_metadata, metadata
 import uuid
 import time
 from utils.utils import text_to_embeddings,text_matching
@@ -44,7 +44,7 @@ def main():
   """
   start = time.time()
   input_str = request.args.get('x')
-  data_file='/Users/kabir/FRE-7773-Project/data/clean_data/product_embeddings.pkl'
+  data_file='D:/designer/GoDesignerFRE7773/data/clean_data/product_embeddings.pkl'
   similar_product, time_taken = text_matching(input_str, data_file)
   print(input_str)
   print("Most Similar Product:", similar_product)

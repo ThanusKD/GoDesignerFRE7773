@@ -22,14 +22,14 @@ if input_room is not None:
     # Generate a random integer
     random_int = random.randint(99, 9999999)
     # Define the path for the temporary file with the random integer in the filename
-    input_room_path = f"/Users/kabir/FRE-7773-Project/data/tmp/temp_image_{random_int}.jpg"
+    input_room_path = f"D:/designer/GoDesignerFRE7773/data/tmp/temp_image_{random_int}.jpg"
     # Write the bytes data to a temporary file
     with open(input_room_path, "wb") as f:
         f.write(bytes_data)
 
 input_room_path = [input_room_path]
-room_root_folder = '/Users/kabir/FRE-7773-Project/data/clean_data/room_embeddings.pkl'
-img_root_folder = '/Users/kabir/FRE-7773-Project/data/images'
+room_root_folder = 'D:/designer/GoDesignerFRE7773/data/clean_data/room_embeddings.pkl'
+img_root_folder = 'D:/designer/GoDesignerFRE7773/data/images'
 
 # Define the action when the 'Get Recommendations' button is clicked
 if st.button("Get Recommendations"):
@@ -61,7 +61,7 @@ if st.button("Get Recommendations"):
             
             # Display each room image in a column
             for idx, room in enumerate(similar_room['Room'].to_list()):
-                root_folder = '/Users/kabir/FRE-7773-Project/data/images/room_scenes/'
+                root_folder = 'D:/designer/GoDesignerFRE7773/data/images/room_scenes/'
                 image_name = room
                 image_path = find_image(root_folder, image_name)
                 
